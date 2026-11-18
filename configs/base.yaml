@@ -1,0 +1,26 @@
+# us-recon 基础配置
+# 占位训练：用随机张量当数据，跑通 train.py -> 出指标
+
+data:
+  # 占位数据：随机张量，模拟 (样本数, 通道, 高, 宽) 的超声图像
+  mode: "random"          # random = 随机张量占位；后续可扩展 picmus
+  n_samples: 160          # 训练样本数
+  n_val: 40               # 验证样本数
+  height: 64              # 图像高
+  width: 64               # 图像宽
+  channel: 1              # 通道数（灰度超声 = 1）
+
+model:
+  name: "unet"            # 模型名称（models/ 下对应实现）
+  base_channels: 32       # UNet 基础通道数
+
+train:
+  batch_size: 16
+  epochs: 20              # 占位训练，epoch 数小一点，快速验证
+  lr: 1.0e-3
+  seed: 42                # 随机种子（变式：42 -> 0 验证逐位一致）
+  loss: "l1"              # 损失类型：l1 / mse
+
+logging:
+  metrics_csv: "metrics_log.csv"   # 落盘指标文件
+  print_every: 5                   # 每 N 个 epoch 打印一次

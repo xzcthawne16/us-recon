@@ -1,0 +1,38 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+
+# ===== 数据与权重（体积大，不入库）=====
+data/*.hdf5
+data/*.h5
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.onnx
+
+# ===== 训练产物 =====
+metrics_log.csv
+*.log
+runs/
+checkpoints/
+outputs/
+
+# ===== IDE / 系统 =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ===== 临时文件 =====
+*.tmp
+_tmp*

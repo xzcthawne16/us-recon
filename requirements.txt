@@ -1,0 +1,10 @@
+# 核心依赖（随机张量占位训练即可跑通）
+torch>=2.0
+numpy>=1.24
+pyyaml>=6.0
+matplotlib>=3.6
+
+# 以下为后续接入真实超声数据（PICMUS hdf5）时再安装：
+# h5py>=3.8
+# hdf5plugin
+# scipy>=1.10
